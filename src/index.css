@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%; /* #F8FAFC */
+    --foreground: 215 25% 27%; /* #1E293B */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+    --primary: 221 83% 53%; /* #2563EB */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 84% 39%; /* #059669 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 25 95% 53%; /* #D97706 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+    --radius: 0.75rem;
+    
+    /* FinStamp custom colors */
+    --fintech-primary: 221 83% 53%; /* #2563EB */
+    --fintech-secondary: 160 84% 39%; /* #059669 */
+    --fintech-accent: 25 95% 53%; /* #D97706 */
+    --fintech-dark: 215 25% 27%; /* #1E293B */
+    --fintech-light: 210 40% 98%; /* #F8FAFC */
+    --fintech-gray: 215 20% 65%; /* #64748B */
+    
+    /* Badge colors */
+    --bronze: 30 76% 72%; /* #CD7F32 */
+    --silver: 0 0% 75%; /* #C0C0C0 */
+    --gold: 51 100% 50%; /* #FFD700 */
+  }
+
+  .dark {
+    --background: 215 25% 27%;
+    --foreground: 210 40% 98%;
+    --card: 215 25% 27%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 25% 27%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 10% 64%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 221 83% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-fintech-primary {
+    color: hsl(var(--fintech-primary));
+  }
+
+  .text-fintech-secondary {
+    color: hsl(var(--fintech-secondary));
+  }
+
+  .text-fintech-accent {
+    color: hsl(var(--fintech-accent));
+  }
+
+  .text-fintech-dark {
+    color: hsl(var(--fintech-dark));
+  }
+
+  .text-fintech-gray {
+    color: hsl(var(--fintech-gray));
+  }
+  
+  .bg-fintech-primary {
+    background-color: hsl(var(--fintech-primary));
+  }
+
+  .bg-fintech-secondary {
+    background-color: hsl(var(--fintech-secondary));
+  }
+
+  .bg-fintech-accent {
+    background-color: hsl(var(--fintech-accent));
+  }
+
+  .bg-fintech-light {
+    background-color: hsl(var(--fintech-light));
+  }
+  
+  .border-bronze {
+    border-color: hsl(var(--bronze));
+  }
+
+  .border-silver {
+    border-color: hsl(var(--silver));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0%;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 100%;
+      transform: translateY(0);
+    }
+  }
+}
